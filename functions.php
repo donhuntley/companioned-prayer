@@ -29,10 +29,7 @@ function theme_js() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_js' );
 
-add_action('wp_enqueue_scripts', function(){
-    wp_dequeue_style('bootstrap_css');
-    wp_dequeue_script('bootstrap_js');
-});
+
 
 //add_filter( 'show_admin_bar', '__return_false' );
 
