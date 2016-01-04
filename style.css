@@ -1,0 +1,371 @@
+/*
+Theme Name: Companioned Prayer
+Author: Don Huntley
+Author URI: http://www.companionedprayer.org/
+Description: Responsive Bootstrap WordPress theme
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: companioned-prayer
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.admin-bar .navbar-fixed-top {
+	margin-top: 30px;
+}
+
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*
+ * See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-webkit-viewport { width: device-width; }
+@-moz-viewport    { width: device-width; }
+@-ms-viewport     { width: device-width; }
+@-o-viewport      { width: device-width; }
+@viewport         { width: device-width; }
+
+/*
+ * 		Typography
+ */
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Slabo', serif;
+    font-size: 1.6em;
+    line-height: 1.5;
+    color: #555;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    color: #1d5d99;
+}
+
+/*
+ * 		icomoon.io fonts (Android and iOS)
+ */
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?4b59pu');
+    src:    url('fonts/icomoon.eot?4b59pu#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?4b59pu') format('truetype'),
+        url('fonts/icomoon.woff?4b59pu') format('woff'),
+        url('fonts/icomoon.svg?4b59pu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-apple:before {
+    content: "\e600";
+}
+.icon-android:before {
+    content: "\e601";
+}
+
+/*
+ *     	Navigation
+ */
+
+.navbar  {
+	background-color: #e3e3d7;
+	font-family: 'Open Sans', sans-serif;	
+}
+.navbar-inverse {
+	border-color: #e3e3d7;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #1d5d99;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #3094f2;
+}
+.hamburger {
+	background-color: #1d5d99;	
+}
+
+@media (min-width:768px) {
+	.sub-menu {
+		display: none;
+		position: absolute;
+		background: #222;
+		background: #d6d6cb;
+		padding:10px 15px;
+		width: 200px;		
+	}
+
+	li:hover .sub-menu {
+		display: block;
+	}
+}
+
+.sub-menu li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+
+.sub-menu li:last-child {
+	margin-bottom: 0;
+}
+
+.sub-menu a  {
+	color: #1d5d99;
+	text-decoration: none;
+}
+
+.sub-menu a:hover  {
+	color: #3094f2;
+}	
+
+.current-menu-item > a, .current-menu-parent > a {
+	background: #d6d6cb;	
+}
+.current-menu-parent li a {
+	background: inherit;
+}
+.current-menu-parent .current-menu-item a {
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/*
+ *     	Header widgets
+ */
+
+.header-widget {
+	background: #d3e7eb;
+	background-image: url("http://localhost/wp-content/uploads/2015/12/clouds.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+ 	color: #6e3919;
+}
+.header-widget h1,
+.header-widget h2,
+.header-widget p {
+	color: #6e3919;
+}
+.header-widget a {
+	color: #6e3919;
+	text-decoration: none;
+}
+.header-widget .logo h1 {
+	font-family: 'Slabo', serif;
+	font-size: 1.6em;
+	font-weight: 600;
+	margin: 20px 0 0;
+}
+.header-widget .logo h2 {
+	font-size: 1.1em;
+	margin: 0;
+	padding-left: 17px;
+}
+.header-widget .logo p {
+	font-size: 1.0em;
+}
+.header-widget h2,
+.header-widget a h2 {
+	font-size: 1.2em;
+	margin: 35px 0 0;
+}
+.attribution {
+	font-size: .7em;
+	font-style: italic;
+	font-weight: lighter;
+}
+.static-page-content,
+.front-page-content {
+	padding-top: 120px;
+}
+
+@media screen and (max-width:767px) {
+	.static-page-content {
+		margin-top: 115px;
+	}
+	.front-page-content {
+		margin-top: -45px;
+	}
+	.logo h2 a {
+		margin-left: 0;
+	}
+	.header-widget {
+		text-align: center;
+	}
+	.logo {
+		margin-top: 35px;
+	}
+}
+@media screen and (max-width:991px) {
+	.static-page-content {
+		margin-top: 120px;
+	}
+	.front-page-content {
+		margin-top: -55px;
+	}
+	.logo {
+		padding-top: 0;
+		margin-bottom: -5px;
+		padding-bottom: 0;
+	}
+	h2.hotline {
+		margin-top: 0;
+		margin-bottom: -20px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	h2.find-a-meeting a {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
+
+/*
+ *     	Front page widgets
+ */
+
+.widget h3 {
+	font-size: 1.4em;
+	color: #6e3919;
+		color: #1d5d99;
+
+}
+
+@media screen and (max-width:991px) {
+	.what-is-aa {
+		margin-top: 150px;
+	}
+}
+
+/*
+ *     	Sidebar widget
+ */
+
+.sidebar {
+	margin-top: 70px;
+}
+@media screen and (max-width:991px) {
+	.sidebar {
+	margin-top: -50px;
+	}
+}
+.sidebar h3 {
+	color: #777;
+}
+.widget {
+	margin: 10px 0 20px;
+}
+ul#menu-menu-2.menu {
+	list-style-type: none;
+	margin-left: 0;
+}
+ul#menu-menu-2.menu li {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
+}
+ul#menu-menu-2.menu li a:hover {
+	text-decoration: none;
+	color: #3094f2;
+}
+
+/*
+ *     	Modal window
+ */
+
+ .update-form {
+ 	margin-top: 30px;
+ }
+ #contactForm {
+ 	margin-top: 40px;
+ }
+ @media screen and (max-width:767px) {
+	#contactForm {
+		margin-top: 70px;
+	}
+}
+
+/*
+ * 		Meetings
+ */
+
+#meetings {
+	margin-top:140px;
+}
+#meeting .page-header {
+		margin-top: 160px;
+	}
+@media screen and (max-width:991px) {
+	#meetings {
+		margin-top: 250px;
+	}
+	#meeting .page-header {
+		margin-top: 265px;
+	}
+}
+@media screen and (max-width:767px) {
+	#meetings {
+		margin-top: 250px;
+	}
+}
+
+/*
+ * 		Animated gif
+ */
+
+ .aa-anim {
+ 	padding-top: 30px;
+ }
+
+ /*
+ * 		Contributions page
+ */
+ .note {
+ 	font-size: .9em;
+ }
+
+/*
+ * 		District 22 page
+ */
+
+.subcommittees {
+	margin-top: 30px;
+}
+
+ /*
+ * 		Events calendar
+ */
+
+
+
+
+
+
+
+
+
